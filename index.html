@@ -1,76 +1,93 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>Admin Panel</title>
-    <style>
-      * {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
-      }
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>SMS Forwarding Panel</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-      html, body {
-        height: 100%;
-        width: 100%;
-        background-color: black;
-        color: white;
-        font-family: Arial, sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
+    html, body {
+      height: 100%;
+      width: 100%;
+      background-color: #000000;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
 
-      .container {
-        text-align: center;
-      }
+    .main-title {
+      font-size: 48px;
+      color: #00ffff;
+      text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff;
+      font-weight: bold;
+      margin-bottom: 30px;
+      text-align: center;
+    }
 
-      .channel-name {
-        font-size: 40px;
-        color: #00ff00;
-        font-weight: bold;
-        margin-bottom: 20px;
-      }
+    #playButton {
+      padding: 20px 40px;
+      font-size: 26px;
+      font-weight: bold;
+      background-color: #00ff00;
+      color: black;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      margin-bottom: 20px;
+      transition: transform 0.3s ease, background 0.3s ease;
+    }
 
-      .admin-title {
-        font-size: 30px;
-        margin-bottom: 20px;
-      }
+    #playButton:hover {
+      background-color: #33ff33;
+      transform: scale(1.05);
+    }
 
-      #playButton {
-        padding: 15px 35px;
-        font-size: 24px;
-        font-weight: bold;
-        background-color: #00ff00;
-        color: black;
-        border: none;
-        border-radius: 10px;
-        cursor: pointer;
-        transition: background 0.3s ease;
-      }
+    #devButton {
+      padding: 12px 30px;
+      font-size: 18px;
+      background-color: #ff00ff;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      text-shadow: 0 0 5px #ff00ff;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
 
-      #playButton:hover {
-        background-color: #33ff33;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <div class="channel-name">Client 2 Hack</div>
-      <div class="admin-title">Admin Panel</div>
-      <button id="playButton">OPEN</button>
+    #devButton:hover {
+      background-color: #ff33ff;
+      transform: scale(1.05);
+    }
+  </style>
+</head>
+<body>
 
-      <audio id="myAudio">
-        <source src="muaaa.mp3" type="audio/mpeg" />
-        Your browser does not support the audio element.
-      </audio>
-    </div>
+  <div class="main-title">SMS FORWARDING PANEL</div>
 
-    <script>
-      document.getElementById("playButton").onclick = function () {
-        var audio = document.getElementById("myAudio");
-        audio.play();
-        this.style.display = "none";
-      };
-    </script>
-  </body>
+  <button id="playButton">OPEN</button>
+
+  <button id="devButton" onclick="window.open('https://youtube.com/@mithun_pasi?si=UOVkOvIQwzhDd0mQ', '_blank')">
+    Developer
+  </button>
+
+  <audio id="myAudio">
+    <source src="muaaa.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+
+  <script>
+    document.getElementById("playButton").onclick = function () {
+      var audio = document.getElementById("myAudio");
+      audio.play();
+      this.style.display = "none";
+    };
+  </script>
+
+</body>
 </html>
