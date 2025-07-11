@@ -3,29 +3,37 @@
   <head>
     <title>Admin Panel</title>
     <style>
-      body {
-        background-color: black;
-        color: white;
-        font-family: sans-serif;
+      * {
         margin: 0;
         padding: 0;
-        height: 100vh;
+        box-sizing: border-box;
+      }
+
+      html, body {
+        height: 100%;
+        width: 100%;
+        background-color: black;
+        color: white;
+        font-family: Arial, sans-serif;
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-direction: column;
       }
 
-      h1 {
+      .container {
+        text-align: center;
+      }
+
+      .channel-name {
         font-size: 40px;
-        margin: 10px;
         color: #00ff00;
+        font-weight: bold;
+        margin-bottom: 20px;
       }
 
-      h2 {
+      .admin-title {
         font-size: 30px;
-        margin: 5px;
-        color: white;
+        margin-bottom: 20px;
       }
 
       #playButton {
@@ -33,23 +41,29 @@
         font-size: 24px;
         font-weight: bold;
         background-color: #00ff00;
+        color: black;
         border: none;
         border-radius: 10px;
         cursor: pointer;
-        margin-top: 20px;
+        transition: background 0.3s ease;
+      }
+
+      #playButton:hover {
+        background-color: #33ff33;
       }
     </style>
   </head>
   <body>
-    <h1>Client 2 Hack</h1>
-    <h2>Admin Panel</h2>
+    <div class="container">
+      <div class="channel-name">Client 2 Hack</div>
+      <div class="admin-title">Admin Panel</div>
+      <button id="playButton">OPEN</button>
 
-    <button id="playButton">OPEN</button>
-
-    <audio id="myAudio">
-      <source src="muaaa.mp3" type="audio/mpeg" />
-      Your browser does not support the audio element.
-    </audio>
+      <audio id="myAudio">
+        <source src="muaaa.mp3" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+    </div>
 
     <script>
       document.getElementById("playButton").onclick = function () {
