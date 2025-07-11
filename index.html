@@ -6,36 +6,56 @@
       body {
         background-color: black;
         color: white;
-        text-align: center;
-        padding-top: 100px;
         font-family: sans-serif;
+        margin: 0;
+        padding: 0;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
       }
+
+      h1 {
+        font-size: 40px;
+        margin: 10px;
+        color: #00ff00;
+      }
+
+      h2 {
+        font-size: 30px;
+        margin: 5px;
+        color: white;
+      }
+
       #playButton {
-        padding: 15px 30px;
-        font-size: 20px;
+        padding: 15px 35px;
+        font-size: 24px;
         font-weight: bold;
         background-color: #00ff00;
         border: none;
-        border-radius: 8px;
+        border-radius: 10px;
         cursor: pointer;
+        margin-top: 20px;
       }
     </style>
   </head>
   <body>
-    <h1>Admin Panel</h1>
+    <h1>Client 2 Hack</h1>
+    <h2>Admin Panel</h2>
 
     <button id="playButton">OPEN</button>
 
     <audio id="myAudio">
-      <source src="muaaa.mp3" type="audio/mpeg">
+      <source src="muaaa.mp3" type="audio/mpeg" />
       Your browser does not support the audio element.
     </audio>
 
     <script>
-      document.getElementById('playButton').onclick = function () {
-        var audio = document.getElementById('myAudio');
+      document.getElementById("playButton").onclick = function () {
+        var audio = document.getElementById("myAudio");
         audio.play();
-        this.style.display = 'none'; // button hide after play
+        this.style.display = "none";
       };
     </script>
   </body>
